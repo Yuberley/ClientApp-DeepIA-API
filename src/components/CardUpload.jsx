@@ -1,7 +1,11 @@
-import React from 'react'
+import React from 'react';
+import './App.css';
 
 export const CardUpload = () => {
-  return (
-    <div>CardUpload</div>
-  )
-}
+	return (
+		<>
+			<h1> Card Upload </h1>
+			<hr />
+		</>
+	);
+};
