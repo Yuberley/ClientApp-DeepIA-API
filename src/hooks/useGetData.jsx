@@ -1,32 +1,39 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 import { getData } from '../helper/getData';
 
-export const useGetData = ( input ) => {
-  
-    const [state, setState] = useState({
-        urlImg: [],
-        isLoading: true,
-        error: null
-    });
+export const useGetData = ({image}) => {
 
+	const [state, setState] = useState({
+		urlImg: null,
+		isLoading: true,
+		error: null,
+	});
 
-    useEffect(() => {
-      
-        getData()
-        .then( urlImg => { 
-            setState({
-                data: urlImg,
-                isLoading: false,
-                error: null
+	useEffect(() => {
+
+        try {
+            getData()
+                .then( urlImg => {
+                    setState({
+                        data: urlImg,
+                        isLoading: false,
+                        error: null
+                    });
+                    
+                    console.log(state);
             });
-            console.log(urlImg);
-        });
+            
+            
+        } catch (error) {
+            setState({
+                ...state,
+                isLoading: false,
+                error: error,
+            });
+        }
 
-        
-    
-    }, [ input ]);
+	}, [image]);
+	
+	return state;
 
-    return state;
-    
-
-}
+};
