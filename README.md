@@ -4,9 +4,9 @@
 
 * **Super Resolution:** *can upscale images up to 4x while also making it more clear -- making sure you don’t lose clarity even while upscaling an image.* 🎯
 
-* **Toonify** *Turn a photo of any face into a cartoon instantly with [artificial intelligence](https://deepai.org/machine-learning-glossary-and-terms/artificial-intelligence). Toonify uses a [convolutional neural network](https://deepai.org/machine-learning-glossary-and-terms/convolutional-neural-network) to quickly transform the photo into a cartoon.* 👩‍🦰
+* **Toonify:** *Turn a photo of any face into a cartoon instantly with [artificial intelligence](https://deepai.org/machine-learning-glossary-and-terms/artificial-intelligence). Toonify uses a [convolutional neural network](https://deepai.org/machine-learning-glossary-and-terms/convolutional-neural-network) to quickly transform the photo into a cartoon.* 👩‍🦰
 
-* **Deep Dream** *Exaggerates feature attributes or textures using information that the bvlc_googlenet model learned during training.*🧿
+* **Deep Dream:** *Exaggerates feature attributes or textures using information that the bvlc_googlenet model learned during training.* 🧿
   
 **DeepAI**  - [API Documentation](https://deepai.org/api-docs/) *The best place to use and discover the latest artificial intelligence.*
   
