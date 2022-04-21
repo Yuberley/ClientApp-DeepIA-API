@@ -1,19 +1,32 @@
+import React, { useEffect, useState } from 'react'
+import { getData } from '../helper/getData';
 
-
-export const useGetData = () => {
+export const useGetData = ( input ) => {
   
-    const deepai = require('deepai');
+    const [state, setState] = useState({
+        urlImg: [],
+        isLoading: true,
+        error: null
+    });
 
-    deepai.setApiKey('quickstart-QUdJIGlzIGNvbWluZy4uLi4K');
 
-    ( async () => {
-        const result = await deepai.callStandardApi('colorizer', {
-            url: 'https://mott.pe/noticias/wp-content/uploads/2018/03/5-razones-por-las-que-debes-hacer-fotograf%C3%ADas-en-blanco-y-negro-elimina.jpg'
+    useEffect(() => {
+      
+        getData()
+        .then( urlImg => { 
+            setState({
+                data: urlImg,
+                isLoading: false,
+                error: null
+            });
+            console.log(urlImg);
         });
-        console.log(result);
-        
-    })();
 
+        
+    
+    }, [ input ]);
+
+    return state;
+    
 
 }
-

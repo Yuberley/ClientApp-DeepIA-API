@@ -1,17 +1,16 @@
 import React from 'react';
 import { useGetData } from '../hooks/useGetData';
-import './App.css';
+
 
 export const CardUpload = () => {
+ 
+	const { urlImg, isLoading, error } = useGetData('input');
 
-	const data = useGetData();
-
-	console.log(data);
+	// console.log(urlImg);
 
 	return (
 		<>
-			<h1> Card Upload </h1>
-			<hr />
+			
 		</>
 	);
 };
