@@ -23,7 +23,6 @@ export const useGetData = ({image}) => {
                     console.log(state);
             });
             
-            
         } catch (error) {
             setState({
                 ...state,
