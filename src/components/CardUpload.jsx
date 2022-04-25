@@ -1,7 +1,5 @@
 import React from 'react';
-import { useGetData } from '../hooks/useGetData';
 import img from './../assets/img/example_colorize.webp';
-import { Loading } from './Loading';
 
 
 export const CardUpload = ({ name }) => {

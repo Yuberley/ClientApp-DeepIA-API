@@ -10,6 +10,9 @@
   
 **DeepAI**  - [API Documentation](https://deepai.org/api-docs/) *The best place to use and discover the latest artificial intelligence.*
   
+
+### Screens 🎴
+![()](https://github.com/Yuberley/ClientApp-DeepIA-API/blob/master/others/screenshot.png)
   
 ## Rebuild the node modules, with the following command in the project folder 📂
 
