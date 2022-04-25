@@ -15,7 +15,7 @@ export const useGetData = ({image}) => {
             getData()
                 .then( urlImg => {
                     setState({
-                        data: urlImg,
+                        urlImg,
                         isLoading: false,
                         error: null
                     });
