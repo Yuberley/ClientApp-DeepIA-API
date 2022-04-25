@@ -1,6 +1,6 @@
 
 // { imgUrl, services }
-export const getData = async () => {
+export const getData = async ( imgUrl, services ) => {
   
     const deepai = require('deepai');
     deepai.setApiKey('90b544fa-e6cc-4240-812c-6ef78a0998d3');
