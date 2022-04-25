@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import img from './../assets/img/example_colorize.webp';
+import { useGetData } from './../hooks/useGetData';
 
+export const CardUpload = ({ imageUpload, setImageUpload }) => {
 
-export const CardUpload = ({ name }) => {
- 
-	
+	const handleSetImage = (e) => {
+		setImageUpload(e.target);
+	};
 	
 	return (
 		<>
@@ -23,7 +25,7 @@ export const CardUpload = ({ name }) => {
 
 				{/*  Input file drag and drog */}
 				<div>
-					<label className="block text-sm font-medium text-gray-700"> Cover photo </label>
+					{/* <label className="block text-sm font-medium text-gray-700"> Cover photo </label> */}
 					<div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
 						<div className="space-y-1 text-center">
 						<svg className="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
@@ -32,13 +34,29 @@ export const CardUpload = ({ name }) => {
 						<div className="flex text-sm text-gray-600">
 							<label htmlFor="file-upload" className="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
 							<span>Upload a file</span>
-							<input id="file-upload" name="file-upload" type="file" className="sr-only" />
+							<input id="file-upload" name="file-upload" type="file" className="sr-only" onChange={ handleSetImage } />
 							</label>
 							<p className="pl-1">or drag and drop</p>
 						</div>
 						<p className="text-xs text-gray-500">PNG, JPG, JPEG up to 10MB</p>
 						</div>
 					</div>
+
+					{ /* Create button with name send */}
+					{
+						imageUpload ? (
+							<button
+							className="mt-4 w-full bg-indigo-500 text-white font-medium py-2 px-4 rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+								Send Image 🖼️
+							</button>
+						) : (
+							<button className="mt-4 w-full bg-gray-500 text-white font-medium py-2 px-4 rounded-md hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500" disabled>
+								Send
+							</button>
+						)
+
+					}
+
 				</div>
 
 				</div>		

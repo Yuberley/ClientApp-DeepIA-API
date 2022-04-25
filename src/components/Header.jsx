@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Header = ({ page, setPage }) => {
+export const Header = ({ setPage }) => {
 
     const handleInputPage = (e) => {
         setPage(e.target.value);

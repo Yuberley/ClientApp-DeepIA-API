@@ -2,6 +2,9 @@ import React from 'react';
 import { Loading } from './Loading';
 
 export const CardOutput = ({ isLoading, urlImg }) => {
+
+	
+
 	return (
 		<>
 			<div className="p-6 border border-gray-100 rounded-xl bg-gray-50 sm:flex sm:space-x-8 sm:p-8">					

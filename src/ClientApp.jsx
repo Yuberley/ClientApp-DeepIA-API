@@ -9,13 +9,15 @@ import { useGetData } from './hooks/useGetData';
 export const ClientApp = () => {
 
 	const [page, setPage] = useState('Image Colorization');
-	const { urlImg, isLoading, error } = useGetData(1);
+	const [imageUpload, setImageUpload] = useState(null);
+	console.log(imageUpload);
+	const { urlImg, isLoading, error } = useGetData(imageUpload);
 
 
 	return (
 		<>
 
-			<Header page={ page } setPage={ setPage } />
+			<Header setPage={ setPage } />
 		
             
 
@@ -26,7 +28,7 @@ export const ClientApp = () => {
 						<div className="grid gap-8 md:grid-rows-2 lg:grid-cols-2">
 
 							{/* <!-- CardUpload --> */}
-							<CardUpload name={ page }/>
+							<CardUpload imageUpload={ imageUpload } setImageUpload={ setImageUpload } />
 
 							{/* <!-- CardOutput --> */}
 							<CardOutput isLoading={ isLoading } urlImg={ urlImg } />
