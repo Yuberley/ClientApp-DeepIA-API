@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import img from './../assets/img/example_colorize.webp';
-import { useGetData } from './../hooks/useGetData';
+import React from 'react';
+import img from './../assets/img/input_colorize.webp';
 
 export const CardUpload = ({ imageUpload, setImageUpload }) => {
 

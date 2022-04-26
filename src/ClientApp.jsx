@@ -5,21 +5,23 @@ import { Header } from './components/Header';
 import { useGetData } from './hooks/useGetData';
 
 
-
 export const ClientApp = () => {
+	
 
-	const [page, setPage] = useState('Image Colorization');
-	const [imageUpload, setImageUpload] = useState(null);
-	console.log(imageUpload);
-	const { urlImg, isLoading, error } = useGetData(imageUpload);
+	const [ page, setPage ] = useState('Image Colorization');
+	const [ imageUpload, setImageUpload ] = useState(null);
+
+	const { urlImg, isLoading } = useGetData(imageUpload);
+
+	
+
 
 
 	return (
 		<>
 
 			<Header setPage={ setPage } />
-		
-            
+		         
 
 			{/* <!-- component --> */}
 			<div className="py-16 white">  
@@ -38,9 +40,6 @@ export const ClientApp = () => {
 					</div>
 				</div>
 
-			
-				
-			
 			
 		</>
 	);
