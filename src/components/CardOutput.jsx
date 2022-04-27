@@ -2,7 +2,7 @@ import React from 'react';
 import { DownloadImage } from './DownloadImage';
 import { Loading } from './Loading';
 
-import imagen_default from '../assets/img/imagen_default.png';
+import imagen_default from './../assets/img/imagen_default.png';
 
 export const CardOutput = ({ isLoading, urlImg }) => {
 
