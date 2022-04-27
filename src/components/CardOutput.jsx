@@ -29,7 +29,7 @@ export const CardOutput = ({ isLoading, urlImg }) => {
 							<div className="space-y-4 mt-4 text-center">
 									<h6 className="text-lg font-semibold leading-none">Your image will be displayed here</h6>
 									<span className="text-xs text-gray-500">after processed</span>
-									<img className="w-32 h-32 mx-auto rounded opacity-30" src={ imagen_default } alt="user avatar" height="300" width="300" loading="lazy" />
+									<img className="w-32 h-32 mx-auto rounded opacity-30" src={ imagen_default } alt="imagen default" height="300" width="300" loading="lazy" />
 							</div>
 						)
 				}

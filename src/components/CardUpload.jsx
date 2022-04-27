@@ -13,8 +13,8 @@ export const CardUpload = ({ imageInput, imageOutput, setImageUpload, descriptio
 				<div className="h-full flex flex-col justify-center space-y-4">
 				
 				<div className="grid grid-cols-2 grid-rows-1 gap-2 sm:gap-6 lg:gap-8">
-					<img className="bg-gray-100 rounded-lg" src={ imageInput } alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."  />
-					<img className="bg-gray-100 rounded-lg" src={ imageOutput } alt="Top down view of walnut card tray with embedded magnets and card groove."  />
+					<img className="bg-gray-100 rounded-lg" src={ imageInput } alt="input images" />
+					<img className="bg-gray-100 rounded-lg" src={ imageOutput } alt="output images" />
 				</div>
 				
 				<p className="text-gray-600 md:text-xl"> { description } </p>
