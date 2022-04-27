@@ -1,29 +1,35 @@
 import { useEffect, useState } from 'react';
 import { getData } from '../helper/getData';
 
-export const useGetData = ( imageUpload ) => {
+export const useGetData = ( imageUpload, category, setImageUpload ) => {
 
 	const [state, setState] = useState({
 		urlImg: null,
-		isLoading: true,
+		isLoading: false,
 		error: null,
 	});
 
 	useEffect(() => {
 
-        if( imageUpload !== null ) {
+        if(imageUpload){
+
+            setState({
+                ...state,
+                isLoading: true,
+                urlImg : false
+            });
+
             try {
-                getData( imageUpload )
+                getData( imageUpload, category )
                     .then( urlImg => {
                         setState({
                             urlImg,
                             isLoading: false,
                             error: null
                         });
-                        
-                        console.log(state);
                 });
-                
+                setImageUpload(null)
+            
             } catch (error) {
                 setState({
                     ...state,
@@ -32,8 +38,7 @@ export const useGetData = ( imageUpload ) => {
                 });
             }
         }
-
-	}, [imageUpload]);
+	}, [ imageUpload ]);
 	
 	return state;
 

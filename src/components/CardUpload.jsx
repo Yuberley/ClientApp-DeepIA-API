@@ -1,7 +1,6 @@
-import React from 'react';
-import img from './../assets/img/input_colorize.webp';
+import React from 'react';;
 
-export const CardUpload = ({ imageUpload, setImageUpload }) => {
+export const CardUpload = ({ imageInput, imageOutput, setImageUpload, description }) => {
 
 	const handleSetImage = (e) => {
 		setImageUpload(e.target);
@@ -10,11 +9,15 @@ export const CardUpload = ({ imageUpload, setImageUpload }) => {
 	return (
 		<>
 			{/* <!-- CardUpload --> */}
-			<div className="row-span-2 shadow-xl p-6 border border-gray-100 rounded-xl bg-gray-50 text-center sm:p-8">
+			<div className="flex-1 row-span-2 shadow-xl p-6 border border-gray-100 rounded-xl bg-gray-50 text-center sm:p-8">
 				<div className="h-full flex flex-col justify-center space-y-4">
-				<p> Example </p>
-				<img className="w-80 h-50 mx-auto rounded shadow-xl shadow-gray-500" src={img} alt="picture example" height="220" width="220" loading="lazy" />
-				<p className="text-gray-600 md:text-xl"> Colorize black and white images using the image colorization API. Add color to old family photos and historic images. </p>
+				
+				<div className="grid grid-cols-2 grid-rows-1 gap-2 sm:gap-6 lg:gap-8">
+					<img className="bg-gray-100 rounded-lg" src={ imageInput } alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."  />
+					<img className="bg-gray-100 rounded-lg" src={ imageOutput } alt="Top down view of walnut card tray with embedded magnets and card groove."  />
+				</div>
+				
+				<p className="text-gray-600 md:text-xl"> { description } </p>
 					<div>
 						<h6 className="text-lg font-semibold leading-none"> API ♾️</h6>
 						<span className="text-xs text-gray-500">Built with AI</span>
@@ -42,7 +45,7 @@ export const CardUpload = ({ imageUpload, setImageUpload }) => {
 					</div>
 
 					{ /* Create button with name send */}
-					{
+					{/* {
 						imageUpload ? (
 							<button
 							className="mt-4 w-full bg-indigo-500 text-white font-medium py-2 px-4 rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
@@ -54,7 +57,7 @@ export const CardUpload = ({ imageUpload, setImageUpload }) => {
 							</button>
 						)
 
-					}
+					} */}
 
 				</div>
 

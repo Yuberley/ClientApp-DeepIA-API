@@ -8,14 +8,16 @@ export const Header = ({ setPage }) => {
 
     return (
             <>
-                <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded-b dark:bg-gray-800">
+                <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-800">
                     <div className="container flex flex-wrap justify-between items-center mx-auto">
-                    <a href="#" className="flex items-center">
-                        <img src="./../logo192.png" className="mr-3 h-6 sm:h-9" alt="ClientApp Logo" />
+                    <div  className="flex items-center">
+                        <img src="./../logo192.png" className="mr-2 h-6 sm:h-9" alt="ClientApp Logo" />
                         <span className="self-center text-sm sm:text-xl font-semibold whitespace-nowrap dark:text-white ">ClientApp DeepAI 🚀</span>
-                    </a>
+                    </div>
                     <div className="flex md:order-2">
-                        <button type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">DeepAI</button>
+                        <a href="https://deepai.org/" target="_blank" rel="noopener noreferrer">
+                            <button type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">DeepAI</button>
+                        </a>
                         <button data-collapse-toggle="mobile-menu-4" type="button" className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-4" aria-expanded="false">
                             <span className="sr-only">Open main menu</span>
                             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path></svg>
@@ -26,7 +28,7 @@ export const Header = ({ setPage }) => {
                         <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
                         <li>
                             <button 
-                            value='Image Colorization' 
+                            value='colorizer' 
                             onClick={ handleInputPage }
                             className="block py-2 pr-4 pl-3 font-bold text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
                                 Colorization
@@ -34,7 +36,7 @@ export const Header = ({ setPage }) => {
                         </li>
                         <li>
                             <button 
-                            value='Super Resolution' 
+                            value='torch-srgan' 
                             onClick={ handleInputPage }
                             className="block py-2 pr-4 pl-3 font-bold text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
                                 Resolution
@@ -42,7 +44,7 @@ export const Header = ({ setPage }) => {
                         </li>
                         <li>
                             <button 
-                            value='Toonify' 
+                            value='toonify' 
                             onClick={ handleInputPage }
                             className="block py-2 pr-4 pl-3 font-bold text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
                                 Toonify
@@ -50,7 +52,7 @@ export const Header = ({ setPage }) => {
                         </li>
                         <li>
                             <button 
-                            value='Deep Dream' 
+                            value='deepdream' 
                             onClick={ handleInputPage }
                             className="block py-2 pr-4 pl-3 font-bold text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
                                 Deep Dream

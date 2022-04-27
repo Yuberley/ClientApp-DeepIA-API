@@ -4,19 +4,18 @@ import { CardUpload } from './components/CardUpload';
 import { Header } from './components/Header';
 import { useGetData } from './hooks/useGetData';
 
+import { getInfoPage }  from './data/infoPage';
+
 
 export const ClientApp = () => {
 	
-
-	const [ page, setPage ] = useState('Image Colorization');
-	const [ imageUpload, setImageUpload ] = useState(null);
-
-	const { urlImg, isLoading } = useGetData(imageUpload);
-
+	const [ page, setPage ] = useState( 'colorizer' );
+	const [ imageUpload, setImageUpload ] = useState( null );
 	
-
-
-
+	const currentPage = getInfoPage( page );
+	
+	const { urlImg, isLoading } = useGetData( imageUpload, currentPage.category , setImageUpload );
+	
 	return (
 		<>
 
@@ -26,14 +25,22 @@ export const ClientApp = () => {
 			{/* <!-- component --> */}
 			<div className="py-16 white">  
 					<div className="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
-						<h2 className="mb-12 text-center text-2xl text-gray-900 font-bold md:text-4xl">{ page }</h2>
-						<div className="grid gap-8 md:grid-rows-2 lg:grid-cols-2">
-
+						<h2 className="mb-12 text-center text-2xl text-gray-900 font-bold md:text-4xl">{ currentPage.title }</h2>
+						<div className="flex flex-wrap	gap-x-9 gap-y-6">
 							{/* <!-- CardUpload --> */}
-							<CardUpload imageUpload={ imageUpload } setImageUpload={ setImageUpload } />
+							<CardUpload 
+								imageInput={ currentPage.imageInput } 
+								imageOutput={ currentPage.imageOutput }
+								imageUpload={ imageUpload } 
+								setImageUpload={ setImageUpload } 
+								description={ currentPage.description } 
+							/>
 
 							{/* <!-- CardOutput --> */}
-							<CardOutput isLoading={ isLoading } urlImg={ urlImg } />
+							<CardOutput 
+								isLoading={ isLoading } 
+								urlImg={ urlImg } 
+							/>
 							
 
 						</div>

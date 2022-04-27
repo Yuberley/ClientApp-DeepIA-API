@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "autoprefixer": "^10.4.4",
     "deepai": "^1.0.21",
+    "file-saver": "^2.0.5",
     "flowbite": "^1.4.2",
     "postcss": "^8.4.12",
     "react": "^18.0.0",
