@@ -9,7 +9,7 @@ export const getData = async ( imageUpload, category = 'colorizer' ) => {
         const { output_url } = await deepai.callStandardApi(category, {
             image: imageUpload,
         }); 
-        console.log(output_url);
+        
         return output_url;
     
     } 
