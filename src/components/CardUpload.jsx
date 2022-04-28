@@ -44,21 +44,6 @@ export const CardUpload = ({ imageInput, imageOutput, setImageUpload, descriptio
 						</div>
 					</div>
 
-					{ /* Create button with name send */}
-					{/* {
-						imageUpload ? (
-							<button
-							className="mt-4 w-full bg-indigo-500 text-white font-medium py-2 px-4 rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-								Send Image 🖼️
-							</button>
-						) : (
-							<button className="mt-4 w-full bg-gray-500 text-white font-medium py-2 px-4 rounded-md hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500" disabled>
-								Send
-							</button>
-						)
-
-					} */}
-
 				</div>
 
 				</div>		
