@@ -3,7 +3,7 @@
 export const getData = async ( imageUpload, category = 'colorizer' ) => {
   
     const deepai = require('deepai');
-    deepai.setApiKey('90b544fa-e6cc-4240-812c-6ef78a0998d3');
+    deepai.setApiKey('b4db127f-dae6-4eb3-8f22-3538b3882f19');
 
     if (imageUpload !== null) {
         const { output_url } = await deepai.callStandardApi(category, {
